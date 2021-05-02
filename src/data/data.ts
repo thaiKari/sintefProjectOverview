@@ -16,7 +16,7 @@ export const data: Data[] = [
   {
     Name: "Norway",
     Id: "NOR",
-    Samples: 500,
+    Samples: 100,
     Assignments: 40,
   },
   {

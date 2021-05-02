@@ -3,7 +3,6 @@ import {Card, CardContent, Typography} from '@material-ui/core/'
 import React from 'react';
 import { Data } from './data/data';
 
-
 const useStyles = makeStyles({
     root: {
       minWidth: 300,
