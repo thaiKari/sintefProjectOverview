@@ -1,25 +1,25 @@
 {
   "files": {
     "main.css": "/sintefProjectOverview/static/css/main.6dea0f05.chunk.css",
-    "main.js": "/sintefProjectOverview/static/js/main.f5fe130d.chunk.js",
-    "main.js.map": "/sintefProjectOverview/static/js/main.f5fe130d.chunk.js.map",
-    "runtime-main.js": "/sintefProjectOverview/static/js/runtime-main.89f7fe75.js",
-    "runtime-main.js.map": "/sintefProjectOverview/static/js/runtime-main.89f7fe75.js.map",
+    "main.js": "/sintefProjectOverview/static/js/main.7d6f84d8.chunk.js",
+    "main.js.map": "/sintefProjectOverview/static/js/main.7d6f84d8.chunk.js.map",
+    "runtime-main.js": "/sintefProjectOverview/static/js/runtime-main.d241b8aa.js",
+    "runtime-main.js.map": "/sintefProjectOverview/static/js/runtime-main.d241b8aa.js.map",
     "static/css/2.c1e28d34.chunk.css": "/sintefProjectOverview/static/css/2.c1e28d34.chunk.css",
-    "static/js/2.655b892f.chunk.js": "/sintefProjectOverview/static/js/2.655b892f.chunk.js",
-    "static/js/2.655b892f.chunk.js.map": "/sintefProjectOverview/static/js/2.655b892f.chunk.js.map",
-    "static/js/3.f5f22e4b.chunk.js": "/sintefProjectOverview/static/js/3.f5f22e4b.chunk.js",
-    "static/js/3.f5f22e4b.chunk.js.map": "/sintefProjectOverview/static/js/3.f5f22e4b.chunk.js.map",
+    "static/js/2.6fce6a4c.chunk.js": "/sintefProjectOverview/static/js/2.6fce6a4c.chunk.js",
+    "static/js/2.6fce6a4c.chunk.js.map": "/sintefProjectOverview/static/js/2.6fce6a4c.chunk.js.map",
+    "static/js/3.19f9993a.chunk.js": "/sintefProjectOverview/static/js/3.19f9993a.chunk.js",
+    "static/js/3.19f9993a.chunk.js.map": "/sintefProjectOverview/static/js/3.19f9993a.chunk.js.map",
     "index.html": "/sintefProjectOverview/index.html",
     "static/css/2.c1e28d34.chunk.css.map": "/sintefProjectOverview/static/css/2.c1e28d34.chunk.css.map",
     "static/css/main.6dea0f05.chunk.css.map": "/sintefProjectOverview/static/css/main.6dea0f05.chunk.css.map",
-    "static/js/2.655b892f.chunk.js.LICENSE.txt": "/sintefProjectOverview/static/js/2.655b892f.chunk.js.LICENSE.txt"
+    "static/js/2.6fce6a4c.chunk.js.LICENSE.txt": "/sintefProjectOverview/static/js/2.6fce6a4c.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
-    "static/js/runtime-main.89f7fe75.js",
+    "static/js/runtime-main.d241b8aa.js",
     "static/css/2.c1e28d34.chunk.css",
-    "static/js/2.655b892f.chunk.js",
+    "static/js/2.6fce6a4c.chunk.js",
     "static/css/main.6dea0f05.chunk.css",
-    "static/js/main.f5fe130d.chunk.js"
+    "static/js/main.7d6f84d8.chunk.js"
   ]
 }
