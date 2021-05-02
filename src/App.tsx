@@ -1,29 +1,50 @@
+import { useEffect, useState } from 'react';
 import { MapContainer, TileLayer, Polygon } from 'react-leaflet'
-import { data } from './data/data';
+import { Data, data } from './data/data';
+import countries from './data/countries.json'
+
+function swapLatLn(coords: any[]) :any[]  {
+  if (coords.length === 2){
+    return [coords[1], coords[0]]
+  } else {
+    return coords.map(swapLatLn)
+  }
+}
+
+function getCoordinates(Id: string):any[] {
+  let countryFeature = countries["features"].find(f => f["properties"]["ISO_A3"] === Id);  
+
+  if (countryFeature){
+    let countryFeatureCoordinates = countryFeature["geometry"]["coordinates"]
+    return countryFeatureCoordinates.map(swapLatLn)
+  }  
+
+  return []
+}
+
+const mapData = (): Data[] => {
+  let newData = data.map((feature: Data) => {
+    return {
+      ...feature,
+      coordinates: getCoordinates(feature.Id)
+    }
+  })
+
+  return newData
+  
+}
 
 
 function App() {
+  const purpleOptions = { color: 'purple',fillColor: 'purple'  }
 
-  const purpleOptions = { color: 'purple',fillColor: 'blue'  }
+  const [processedData, setprocessedData] = useState<Data[]|null>(null)
 
-  // console.log(data[0].geometry.coordinates.forEach((element: any) => {
-  //   console.log(element)
-  // }))
+  useEffect(() => {
+    setprocessedData(mapData())
+  }, [])
 
-  const multiPolygon:any = [
-    [
-      [51.51, -0.12],
-      [51.51, -0.13],
-      [51.53, -0.13],
-    ],
-    [
-      [51.51, -0.05],
-      [51.51, -0.07],
-      [51.53, -0.07],
-    ],
-  ]
-
-  console.log(multiPolygon)
+  console.log(processedData)
 
   return (
     <MapContainer style={{ width: '100vw', height: '100vh' }} center={[30, 0]} zoom={3}>
@@ -33,11 +54,16 @@ function App() {
         url={`https://api.mapbox.com/styles/v1/karimj/cjm203zaw16gb2ro02gfsmt3l/tiles/256/{z}/{x}/{y}@2x?access_token=${process.env.REACT_APP_MAPBOX_ACCESS_TOKEN}`}
       />
 
-<Polygon pathOptions={purpleOptions} positions={multiPolygon} />
+      {processedData && processedData.map(data => 
+      <Polygon pathOptions={purpleOptions} positions={data.coordinates ?? []}/>
+      )}
 
-      <Polygon pathOptions={purpleOptions} positions={data[1].geometry.coordinates} />
     </MapContainer>
   );
 }
 
 export default App;
+
+
+
+
