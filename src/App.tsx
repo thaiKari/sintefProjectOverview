@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react';
-import { MapContainer, TileLayer, Polygon, Tooltip } from 'react-leaflet'
+import { MapContainer, TileLayer, Polygon } from 'react-leaflet'
 import { Container, Typography } from '@material-ui/core/'
 import { Data, data } from './data/data';
 import countries from './data/countries.json'
@@ -95,14 +95,14 @@ function App() {
               mouseout: () => { setselected(null) }
             }}
           >
-            <Tooltip sticky>
+          
               <Typography variant="h5" component="h2">
                 {data.Name}
               </Typography>
               <Typography color="textSecondary">
                 {`${data.Assignments} Assignments`}
               </Typography>
-            </Tooltip>
+
           </Polygon>
         )}
 
