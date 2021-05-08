@@ -69,7 +69,7 @@ function App() {
     const isSelected = selected && selected.Id === data.Id
     const color = getColor(data.Samples)
 
-    return { color: isSelected ? 'gray' : 'transparent', fillColor: color, fillOpacity: 0.6 }
+    return { color: isSelected ? colors[colors.length-1] : 'transparent', fillColor: color, fillOpacity: 0.6 }
 
   }
 
